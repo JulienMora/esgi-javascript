@@ -23,6 +23,6 @@ function type_check_v2(arg1, arg2) {
 }
 
 
-function type_check() {
+function type_check(arg1, arg2) {
 	//TODO
 }
