@@ -30,51 +30,38 @@ function snake_case(str) {
 }
 
 function prop_access(str, prop = {}) {
+	//TODO
 	prop.unshift(str);
 	prop['type']['name'] = "chien";
 	
 }
 
 function leet(str) {
-	let res = "";
-
-	if (str.indexOf('a') > -1) {
-	  	res = str.replace(/a/g, "4");
-	}
-	if (str.indexOf('e') > -1) {
-	  	res = str.replace(/e/g, "3");
-	}
-	if (str.indexOf('i') > -1) {
-	  	res = str.replace(/i/g, "1");
-	}
-	if (str.indexOf('o') > -1) {
-	  	res = str.replace(/o/g, "o");
-	}
-	if (str.indexOf('u') > -1) {
-	  	res = str.replace(/u/g, "_");
-	}
-	if (str.indexOf('y') > -1) {
-	  	res = str.replace(/y/g, "7")
-	}
-
-	return res;
+	str = str.replace(/[aA]+/g, "4");
+    str = str.replace(/[oO]+/g, "0");
+    str = str.replace(/[eE]+/g, "3");
+    str = str.replace(/[sS]+/g, "5");
+    str = str.replace(/[tT]+/g, "7");
+    str = str.replace(/[iI]+/g, "1");
+    str = str.replace(/[bB]+/g, "8");
+    return str;
 
 }
 
 function verlan(str) {
-	return str.split("").reverse().join("");
+	word = str.split(" ").map(function(str) {
+        return str.split("").reverse().join("");
+    });
+    return word.join(" ");
 }
 
 function yoda(str) {
-	return str.reverse().join("");
+	return str.split(" ").reverse().join(" ");
 }
 
 function vig() {
 
 }
-
-console.log(yoda("Hello World"));
-
 
 
 
